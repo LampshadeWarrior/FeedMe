@@ -1,8 +1,14 @@
+<div class="title">
+  <%= @feed.name %>
+</div>
+<div class="sub-title">
+  <%= @feed.description %>
+</div>
 <div class="container">
   <% @entries.each do |entry| %>
     <div class="panel panel-default">
-      <div class="panel-body">
-        <%= link_to entry.title, entry %> - <i> published <%= time_ago_in_words(entry.published) %> ago.</i>
+      <div class="entry-box">
+        <%= link_to entry.title, entry, class: "link" %> - <i> published <%= time_ago_in_words(entry.published) %> ago.</i>
       </div>
     </div>
   <% end %>
