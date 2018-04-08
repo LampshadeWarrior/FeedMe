@@ -1,6 +1,9 @@
 <div class="title">
   <%= @feed.name %>
 </div>
+<div class="sub-title">
+  <%= @feed.description %>
+</div>
 <div class="container">
   <% @entries.each do |entry| %>
     <div class="panel panel-default">

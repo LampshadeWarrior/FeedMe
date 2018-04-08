@@ -1,3 +1,5 @@
+@import "bootstrap";
+
 .entry-box {
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -17,4 +19,18 @@
   font-weight: normal;
   line-height: 48px;
   margin: 0;
+}
+
+.navbar-default:hover, .navbar-brand:hover, .nav-item:hover, .nav-link:hover, a:hover {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: transparent;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: #EF92A5;
+  text-decoration: none;
 }
