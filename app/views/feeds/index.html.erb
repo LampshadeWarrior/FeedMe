@@ -15,12 +15,12 @@
   <tbody>
     <% @feeds.each do |feed| %>
       <tr>
-        <td><%= link_to feed.name, entries_path(feed) %></td>
+        <td><%= link_to feed.name, entries_path(feed), class: "link" %></td>
         <td><%= feed.url %></td>
         <td><%= feed.description %></td>
-        <td><%= link_to 'Show', feed %></td>
-        <td><%= link_to 'Edit', edit_feed_path(feed) %></td>
-        <td><%= link_to 'Destroy', feed, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', feed, class: "link" %></td>
+        <td><%= link_to 'Edit', edit_feed_path(feed), class: "link" %></td>
+        <td><%= link_to 'Destroy', feed, method: :delete, data: { confirm: 'Are you sure?' }, class: "link" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Feed', new_feed_path %>
+<%= link_to 'New Feed', new_feed_path, class: "link" %>
