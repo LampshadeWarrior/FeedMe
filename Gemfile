@@ -58,3 +58,9 @@ gem 'feedjira'
 gem 'bootstrap', '~> 4.0.0'
 
 gem 'sprockets', '~> 3.5', '>= 3.5.2'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.7'
+  gem 'factory_bot_rails'
+end
+
