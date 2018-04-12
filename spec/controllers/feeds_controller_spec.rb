@@ -14,11 +14,12 @@ RSpec.describe FeedsController, type: :controller do
       expect(response).to have_http_status(:success)
     end
   end
-  
+
   describe "feeds#show action" do
     it "should successfully show a single feed" do
       feed = FactoryBot.create(:feed)
       get  :show, params: { id: feed.id }
+      expect(response).to have_http_status(:success)
     end
   end
 end
