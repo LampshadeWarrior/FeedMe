@@ -1,5 +1,6 @@
 class FeedsController < ApplicationController
   before_action :set_feed, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /feeds
   # GET /feeds.json
@@ -14,6 +15,7 @@ class FeedsController < ApplicationController
 
   # GET /feeds/new
   def new
+
     @feed = Feed.new
   end
 
@@ -24,17 +26,19 @@ class FeedsController < ApplicationController
   # POST /feeds
   # POST /feeds.json
   def create
-    @feed = Feed.new(feed_params)
-
-    respond_to do |format|
-      if @feed.save
-        format.html { redirect_to @feed, notice: 'Feed was successfully created.' }
-        format.json { render :show, status: :created, location: @feed }
-      else
-        format.html { render :new }
-        format.json { render json: @feed.errors, status: :unprocessable_entity }
-      end
-    end
+    # @feed = Feed.new(feed_params)
+    @feed = current_user.feeds.create(feed_params)
+    redirect_to root_path
+    #
+    # respond_to do |format|
+    #   if @feed.save
+    #     format.html { redirect_to @feed, notice: 'Feed was successfully created.' }
+    #     format.json { render :show, status: :created, location: @feed }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @feed.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /feeds/1
