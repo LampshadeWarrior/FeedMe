@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  get 'entries/index'
-
-  get 'entries/show'
-
+  devise_for :users
   root 'feeds#index'
   resources :feeds do
     member do
