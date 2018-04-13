@@ -1,7 +1,4 @@
 FactoryBot.define do
-  factory :user do
-    
-  end
 
   factory :feed do
     sequence :name do |n|
