@@ -26,4 +26,12 @@ FactoryBot.define do
       "Fake author #{n}"
     end
   end
+
+  factory :user do
+    sequence :email do |n|
+      "FakeEmail#{n}@gmail.com"
+    end
+    password "FakePassword"
+    password_confirmation "FakePassword"
+  end
 end

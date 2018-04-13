@@ -11,6 +11,6 @@ class EntriesController < ApplicationController
   private
 
   def set_feed
-    @feed = Feed.find(params[:feed_id])
+    @feed = Feed.find(params[:id])
   end
 end
