@@ -6,6 +6,7 @@ class FeedsController < ApplicationController
   # GET /feeds.json
   def index
     @feeds = Feed.all
+    @feed = Feed.new
   end
 
   # GET /feeds/1
@@ -15,7 +16,6 @@ class FeedsController < ApplicationController
 
   # GET /feeds/new
   def new
-
     @feed = Feed.new
   end
 
@@ -55,14 +55,13 @@ class FeedsController < ApplicationController
     end
   end
 
-  # DELETE /feeds/1
-  # DELETE /feeds/1.json
   def destroy
-    @feed.destroy
-    respond_to do |format|
-      format.html { redirect_to feeds_url, notice: 'Feed was successfully destroyed.' }
-      format.json { head :no_content }
+    @feed = Feed.find(params[:id])
+    if @feed.user != current_user
+      return render text: "Not Allowed", status: :forbidden
     end
+    @feed.destroy
+    redirect_to root_path
   end
 
   private

@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 
 .entry-box {
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -21,16 +22,41 @@
   margin: 0;
 }
 
-.navbar-default:hover, .navbar-brand:hover, .nav-item:hover, .nav-link:hover, a:hover {
-  background-color: transparent;
-  text-decoration: none;
-}
-
-.link:hover {
-  background-color: transparent;
-}
-
 .nav > li > a:hover, .nav > li > a:focus {
   background-color: #EF92A5;
   text-decoration: none;
+}
+
+body {
+  background: image_url("star_background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.feed-table {
+    margin: auto;
+    width: 50%;
+    border: 3px;
+    padding: 10px;
+    background-color: #fffcc4;
+    border-radius: 25px;
+}
+
+.feed-box {
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+h1 {
+  color: #fffcc4
 }
