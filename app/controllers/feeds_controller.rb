@@ -6,6 +6,7 @@ class FeedsController < ApplicationController
   # GET /feeds.json
   def index
     @feeds = Feed.all
+    @feed = Feed.new
   end
 
   # GET /feeds/1
@@ -15,7 +16,6 @@ class FeedsController < ApplicationController
 
   # GET /feeds/new
   def new
-
     @feed = Feed.new
   end
 
