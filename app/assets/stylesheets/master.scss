@@ -11,6 +11,7 @@
   margin-top: 10px;
   margin-bottom: 15px;
   padding: 20px;
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
 .title {
@@ -55,6 +56,21 @@ body {
   margin-bottom: 15px;
   padding: 20px;
   font-family: 'Playfair Display', serif;
+}
+
+.feed-title {
+  color: #c9d0d4;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 46px;
+  font-weight: 100;
+  line-height: 50px;
+  letter-spacing: 1px;
+  padding: 10px;
+  border-bottom: double #555;
+}
+
+.feed-sub-title {
+  color: #bbc3c8; font-family: 'Verdana', sans-serif; font-size: 16px; line-height: 26px; text-indent: 30px; margin: 0;
 }
 
 h1 {
