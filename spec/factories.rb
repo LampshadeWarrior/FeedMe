@@ -29,7 +29,7 @@ FactoryBot.define do
 
   factory :user do
     sequence :email do |n|
-      "FakeEmail#{n}@gmail.com"
+      "FakeEmail#{n}@factory.com"
     end
     password "FakePassword"
     password_confirmation "FakePassword"
