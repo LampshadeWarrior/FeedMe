@@ -29,15 +29,6 @@ RSpec.describe Entry, type: :model do
     expect(subject).to_not be_valid
   end
 
-  it "is not valid without an author" do
-    user = FactoryBot.create(:user)
-    feed = FactoryBot.create(:feed, :user_id => user.id)
-    subject.feed_id = feed.id
-    subject.title = "Whatever"
-    subject.content = "Whatever"
-    expect(subject).to_not be_valid
-  end
-
   it "is not valid without a feed_id" do
     subject.title = "Whatever"
     subject.content = "Whatever"

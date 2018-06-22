@@ -21,8 +21,7 @@
       </tbody>
     </table>
   </div>
-  <br>
-
+  <br />
     <!-- Button trigger modal -->
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#NewFeedModal">
     New Feed
@@ -46,12 +45,9 @@
               <br />
             <%= f.input :description %>
               <br />
-            <%= f.submit "Create Feed" %>
+            <%= f.submit "Create Feed", class: "btn btn-primary" %>
           <% end %>
-        </div>
-        <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>

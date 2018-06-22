@@ -65,6 +65,8 @@ gem 'font-awesome-rails'
 
 gem 'simple_form'
 
+gem 'plyr-rails', '~> 3.3', '>= 3.3.7'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.7'
   gem 'factory_bot_rails'

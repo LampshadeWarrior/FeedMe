@@ -13,5 +13,10 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require plyr
 //= require turbolinks
 //= require_tree .
+
+$(document).on("turbolinks:load", function() {
+    const player = new Plyr('#player');
+  });

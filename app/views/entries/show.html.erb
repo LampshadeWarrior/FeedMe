@@ -1,5 +1,10 @@
 <div class="container">
   <h3><%= link_to @entry.title %></h3>
+  <br />
+
+  <%= audio_tag(@entry.url, controls: true, id: "player") %>
+
+  <br />
   <i>published on <%= @entry.published %> by <%= @entry.author %></i>
   <p>
     <%= @entry.content.html_safe %>
