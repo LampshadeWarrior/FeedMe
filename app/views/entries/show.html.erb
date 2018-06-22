@@ -1,9 +1,9 @@
 <div class="container">
   <h3><%= link_to @entry.title %></h3>
   <br />
-  <audio id="player" controls>
-    <source src="https://dts.podtrac.com/redirect.mp3/audio.simplecast.com/967c154a.mp3" type="audio/mp3">
-  </audio>
+
+  <%= audio_tag(@entry.url, controls: true, id: "player") %>
+
   <br />
   <i>published on <%= @entry.published %> by <%= @entry.author %></i>
   <p>

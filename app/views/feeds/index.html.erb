@@ -22,10 +22,6 @@
     </table>
   </div>
   <br />
-  <audio id="player" controls>
-    <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3" type="audio/mp3">
-  </audio>
-  <br />
     <!-- Button trigger modal -->
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#NewFeedModal">
     New Feed
@@ -49,12 +45,9 @@
               <br />
             <%= f.input :description %>
               <br />
-            <%= f.submit "Create Feed" %>
+            <%= f.submit "Create Feed", class: "btn btn-primary" %>
           <% end %>
-        </div>
-        <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
