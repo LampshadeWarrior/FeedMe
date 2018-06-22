@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 
-gem 'bundler', '~> 1.16', '>= 1.16.1'
+gem 'bundler', '~> 1.16', '>= 1.16.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.6'
 # Use postgresql as the database for Active Record
