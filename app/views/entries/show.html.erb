@@ -1,12 +1,13 @@
 <div class="container">
-  <h3><%= link_to @entry.title %></h3>
+  <h3><%= @entry.title %></h3>
   <br />
+  <div class="feed-box">
+    <%= audio_tag(@entry.url, controls: true, id: "player") %>
 
-  <%= audio_tag(@entry.url, controls: true, id: "player") %>
-
-  <br />
-  <i>published on <%= @entry.published %> by <%= @entry.author %></i>
-  <p>
-    <%= @entry.content.html_safe %>
-  </p>
+    <br />
+    <i>published on <%= @entry.published %> by <%= @entry.author %></i>
+    <p>
+      <%= @entry.content.html_safe %>
+    </p>
+  </div>
 </div>
