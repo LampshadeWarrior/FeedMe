@@ -16,6 +16,7 @@
             <td><%= link_to feed.name, entries_path(feed), class: "link" %></td>
             <td><%= feed.description %></td>
             <td><%= link_to 'Edit', edit_feed_path(feed), class: "link" %></td>
+            <td><%= link_to 'Delete', feed_path(feed), method: :delete, data: {confirm: 'Are you sure?' }, class: "link" %></td>
           </tr>
         <% end %>
       </tbody>
