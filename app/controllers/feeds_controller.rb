@@ -55,7 +55,7 @@ class FeedsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @feed = Feed.find(params[:id])
     if @feed.user != current_user
       return render text: "Not Allowed", status: :forbidden
